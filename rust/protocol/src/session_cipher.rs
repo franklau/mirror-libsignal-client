@@ -24,6 +24,7 @@ pub async fn message_encrypt(
     identity_store: &mut dyn IdentityKeyStore,
     ctx: Context,
 ) -> Result<CiphertextMessage> {
+    log::info!("hello frank")
     let mut session_record = session_store
         .load_session(remote_address, ctx)
         .await?
